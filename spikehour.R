@@ -9,8 +9,6 @@ head(electr3)
 tail(electr3)
 str(electr3)
 
-
-
 cons <- electr3 %>% 
   filter(UsageType == "Consumption") %>%
   filter(From == "2020-10-19T19:00:00" | From == "2020-10-19T19:30:00")
@@ -20,7 +18,6 @@ table(cons$AmountUsed)
 dim(cons)
 cons_sum <- cons %>%
   select(AmountUsed)
-
 
 colSums=colSums(cons_sum)
 colSums
